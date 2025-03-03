@@ -16,11 +16,10 @@ const Nav = () => {
   };
 
   return (
-    <header className="padding-x py-8 absolute z-10 w-full">
-      <nav className="flex justify-between items-center max-container">
+    <header className="padding-x py-8 absolute z-10 w-full mt-12">
+      <nav className="flex max-lg:justify-between items-center max-container">
         <div
-          className="flex items-center justify-between w-[129px]"
-          href="/"
+          className="flex items-center justify-between w-[129px] lg:hidden"
         >
           <img
             src={headerLogo}
@@ -29,15 +28,15 @@ const Nav = () => {
             height={29}
             className="m-0 w-auto h-[50px]"
           />
-          <h2 className="font-palanquin ml-4 text-[#106351] font-bold">KEMENGER</h2>
+          <h2 className="font-worksans ml-4 text-[#106351] font-bold">KEMENGER</h2>
         </div>
-        <ul className="flex justify-center items-center gap-16 max-lg:hidden">
+        <ul className="flex justify-center items-center gap-16 max-lg:hidden ml-[500px]">
           {navLinks.map((item) => (
             <li key={item.label}>
               <a
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="font-montserrat leading-normal text-lg text-slate-gray"
+                className="font-inter leading-normal text-lg text-slate-gray"
               >
                 {item.label}
               </a>

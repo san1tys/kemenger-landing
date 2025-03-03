@@ -46,9 +46,9 @@ const CustomerReviews = () => {
 
   return (
     <section id="reviews" className="max-w-[1200px] mx-auto w-full py-10">
-      <h3 className="font-palanquin text-center text-4xl font-bold">
+      <h3 className="font-worksans text-center text-4xl font-bold">
         Что говорят наши
-        <span className="text-coral-red underline underline-offset-[0.75rem]"> участники? </span>
+        <span className="text-coral-red underline underline-offset-[0.75rem]"> участники?</span>
       </h3>
       <p className="m-auto mt-4 max-w-lg text-center info-text">
         Отзывы тех, кто уже испытал перемены
@@ -58,8 +58,8 @@ const CustomerReviews = () => {
           <ReviewCard
             key={index}
             videoURL={review.videoURL}
-            customerName={review.customerName}
             feedback={review.feedback}
+            posterURL={review.posterURL}
             onPlay={() => openModal(review.videoURL)}
           />
         ))}

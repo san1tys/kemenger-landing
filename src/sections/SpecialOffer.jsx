@@ -22,7 +22,7 @@ const SpecialOffer = () => {
       </div>
 
       <div className='flex flex-[0.8] flex-col'>
-        <h2 className='text-4xl font-palanquin font-bold'>
+        <h2 className='text-4xl font-worksans font-bold'>
           Сделай первый шаг к  <span className='text-coral-red underline underline-offset-[0.75rem]'>переменам</span> на мастер-классе!
         </h2>
         <p className='mt-4 info-text'>

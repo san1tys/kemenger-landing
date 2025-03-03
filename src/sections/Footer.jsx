@@ -14,9 +14,9 @@ const Footer = () => {
               height={36}
               className='m-0'
             />
-            <h2 className="font-montserrat text-2xl leading-normal font-medium text-white ml-4 mt-2">Kemenger</h2>
+            <h2 className="font-inter text-2xl leading-normal font-medium text-white ml-4 mt-2">Kemenger</h2>
           </div>
-          <p className='mt-6 text-base leading-7 font-montserrat text-white-400 sm:max-w-sm'>
+          <p className='mt-6 text-base leading-7 font-inter text-white-400 sm:max-w-sm'>
             Мы помогаем людям достигать своих целей и становиться лучше.
             © 2025, Кеменгер. Все права защищены.
           </p>
@@ -35,13 +35,13 @@ const Footer = () => {
         <div className='flex justify-between lg:gap-10 gap-20 flex-wrap ml-24 max-xl:ml-0'>
           {footerLinks.map((section) => (
             <div key={section.title}>
-              <h4 className='font-montserrat text-2xl leading-normal font-medium mb-6 text-white mt-2'>
+              <h4 className='font-inter text-2xl leading-normal font-medium mb-6 text-white mt-2'>
                 {section.title}
               </h4>
               <ul className="">
                 {section.links.map((link) => (
                   <li
-                    className='flex items-center gap-4 mt-3 font-montserrat text-base leading-normal text-white-400 hover:text-slate-gray'
+                    className='flex items-center gap-4 mt-3 font-inter text-base leading-normal text-white-400 hover:text-slate-gray'
                     key={link.name}
                   >
                     <img src={link.src} width={24} height={24} alt="logo" />

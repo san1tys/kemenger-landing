@@ -4,7 +4,7 @@ import facebook from './facebook.svg'
 import hamburger from './hamburger.svg'
 import instagram from './instagram.svg'
 import support from './support.svg'
-import twitter from './twitter.svg'
+import whatsapp from './whatsapp.svg'
 import experience from './quality.svg'
 import method from './method.svg'
 import phone from './phone.svg'
@@ -17,7 +17,7 @@ export {
     hamburger,
     instagram,
     support,
-    twitter,
+    whatsapp,
     experience,
     method,
     phone,

@@ -1,0 +1,118 @@
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    backface-visibility: hidden;
+    --tw-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    --tw-shadow-colored: 0 10px 40px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.back {
+    background-color: #fff;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.container:hover>.card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.corner {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+
+}
+
+.corner::before,
+.corner::after {
+    content: '';
+    position: absolute;
+    background-color: #0F6351;
+}
+
+.corner::before {
+    width: 100%;
+    height: 2px;
+}
+
+.corner::after {
+    width: 2px;
+    height: 100%;
+}
+
+.corner.top-left {
+    top: 24px;
+    left: 24px;
+}
+
+.corner.top-left::before {
+    top: 0;
+    left: 0;
+}
+
+.corner.top-left::after {
+    top: 0;
+    left: 0;
+}
+
+.corner.top-right {
+    top: 24px;
+    right: 24px;
+}
+
+.corner.top-right::before {
+    top: 0;
+    right: 0;
+}
+
+.corner.top-right::after {
+    top: 0;
+    right: 0;
+}
+
+.corner.bottom-left {
+    bottom: 24px;
+    left: 24px;
+}
+
+.corner.bottom-left::before {
+    bottom: 0;
+    left: 0;
+}
+
+.corner.bottom-left::after {
+    bottom: 0;
+    left: 0;
+}
+
+.corner.bottom-right {
+    bottom: 24px;
+    right: 24px;
+}
+
+.corner.bottom-right::before {
+    bottom: 0;
+    right: 0;
+}
+
+.corner.bottom-right::after {
+    bottom: 0;
+    right: 0;
+}
