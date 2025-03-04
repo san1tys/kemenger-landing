@@ -1,6 +1,6 @@
 import { facebook, instagram, support, experience, whatsapp, method, phone, location, envelope } from "../assets/icons";
 import { customer1, customer2, customer3, customer4, customer5 } from '../assets/videos'
-import { poster1, poster2, poster3, poster4, poster5, mas1, mas2, mas3 } from "../assets/images";
+import { poster1, poster2, poster3, poster4, poster5, mas1, mas2, mas3, mas4 } from "../assets/images";
 
 export const navLinks = [
     { href: "#home", label: "Главная" },
@@ -96,11 +96,13 @@ export const masters = [
         experience: "25 лет опыта трансформационной деятельности"
     },
     {
-        imgURL: mas1,
-        label: "Тимур Сагинбаев",
-        subtext: "Сооснователь проекта kemengers",
-        backContent: "12 лет юридической практики",
-    },
+        imgURL: mas4,
+        label: "Айбек Акылбаев",
+        subtext: "Мотивационный спикер, оратор",
+        backContent: "Основатель мужского тренинга #1 в Казахстане QAHARMAN ORDA, тренер QAHARMAN ORDA. Сооснователь трансформационного тренинга KEMENGER. Основатель и тренер ораторского центра Orator.kz. Спортсмен: IRONMAN 70.3, марафонец, полумарафонец. Любитель активного образа жизни, увлекается горами.",
+        experience: "Опыт в проведении тренингов и ораторском мастерстве"
+    }
+
 ];
 
 export const reviews = [

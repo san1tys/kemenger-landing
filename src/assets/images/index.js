@@ -1,5 +1,5 @@
 import intro from './intro.png'
-import about from './about.jpeg'
+import about from './aboutus.jpg'
 
 import footerLogo from './footer-logo.svg'
 import headerLogo from './header-logo.svg'
@@ -18,6 +18,7 @@ import poster5 from './poster5.jpg'
 import mas1 from './mas1.jpg'
 import mas2 from './mas2.jpg'
 import mas3 from './mas3.jpg'
+import mas4 from './mas4.jpg'
 
 export {
 
@@ -40,6 +41,7 @@ export {
 
     mas1,
     mas2,
-    mas3
+    mas3,
+    mas4
 
 }
