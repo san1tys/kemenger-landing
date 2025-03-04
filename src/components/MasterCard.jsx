@@ -21,10 +21,10 @@ const MasterCard = ({ imgURL, label, subtext, backContent, experience }) => {
           </div>
         </div>
         <div className="back">
-          <div class="corner top-left"></div>
-          <div class="corner top-right"></div>
-          <div class="corner bottom-left"></div>
-          <div class="corner bottom-right"></div>
+          <div className="corner top-left"></div>
+          <div className="corner top-right"></div>
+          <div className="corner bottom-left"></div>
+          <div className="corner bottom-right"></div>
           <h2 className="text-lg font-worksans font-bold mt-16">{label}</h2>
           <p className="mt-4 font-inter text-slate-gray text-sm max-w-[30ch]">{backContent}</p>
           <p className="text-base font-semibold mt-6 max-w-[25ch]">{experience}</p>

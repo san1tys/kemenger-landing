@@ -11,10 +11,12 @@ import Modal from "../components/Modal";
 const CustomerReviews = () => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [currentVideoURL, setCurrentVideoURL] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   const openModal = (videoURL) => {
     setCurrentVideoURL(videoURL);
     setModalOpen(true);
+    setIsLoading(true);
   };
 
   const closeModal = () => {
@@ -66,10 +68,16 @@ const CustomerReviews = () => {
       </Slider>
       {isModalOpen && (
         <Modal onClose={closeModal}>
+          {isLoading && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <p className="text-center text-gray-500">Загрузка...</p>
+            </div>
+          )}
           <video
             src={currentVideoURL}
             autoPlay
             className="w-full h-full rounded-lg"
+            onCanPlay={() => setIsLoading(false)}
           ></video>
         </Modal>
       )}
