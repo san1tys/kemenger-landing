@@ -3,24 +3,30 @@ import { useState } from "react";
 const Subscribe = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [phone, setPhone] = useState("");
 
   function handleInput(e) {
     let value = e.target.value.replace(/\D/g, "");
+
     if (!value.startsWith("7")) {
       value = "7" + value;
     }
+
     if (value.length > 11) {
       value = value.slice(0, 11);
     }
-    const formattedValue = "+ " + value.slice(0, 1) + " " + value.slice(1);
-    e.target.value = formattedValue;
+
+    const formattedValue = "+" + value;
+    setPhone(formattedValue);
   }
 
+
   function handleFocus(e) {
-    if (!e.target.value) {
-      e.target.value = "+ 7 ";
+    if (!phone) {
+      setPhone("+ 7 ");
     }
   }
+
 
   function Submit(e) {
     e.preventDefault();
@@ -87,9 +93,11 @@ const Subscribe = () => {
               placeholder="Ваш номер телефона"
               className="bg-transparent border border-gray-300 text-gray-600 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-gray-600 caret-gray-600"
               required
-              onInput={(e) => handleInput(e)}
-              onFocus={(e) => handleFocus(e)}
+              value={phone}
+              onInput={handleInput}
+              onFocus={handleFocus}
             />
+
           </div>
           <div className="mb-5 relative">
             <select
