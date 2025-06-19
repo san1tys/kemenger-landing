@@ -1,39 +1,69 @@
-import { about } from "../assets/images";
-import { Button } from "../components";
+import { tree } from "../assets/images";
+import { master1, master2, master3, about } from "../assets/images";
+
 
 const SuperQuality = () => {
   return (
-    <section
-      id='about-us'
-      className='flex justify-between items-center max-lg:flex-col gap-10 w-full max-container'
-    >
-      <div className='flex flex-1 flex-col'>
-        <h2 className='font-worksans  text-4xl lg:max-w-lg font-bold'>
-          Что такое тренинг <span className="text-coral-red underline underline-offset-[0.75rem]">Кеменгер?</span>
-        </h2>
-        <p className='mt-6 lg:max-w-lg info-text'>
-          Тренинг «Кеменгер» — это уникальный опыт самопознания, который за 4 насыщенных дня поможет тебе раскрыть свои сильные стороны, осознать глубинные установки и обрести практические инструменты для жизни.
-        </p>
-        <p className='mt-6 lg:max-w-lg info-text'>
-          Ты разберёшься в своих реакциях и научишься управлять ими через трансформационные практики. Развитие эмоционального интеллекта поможет тебе лучше взаимодействовать с людьми и выстраивать доверительные отношения
-        </p>
-        <p className='mt-6 lg:max-w-lg info-text'>
-          Выход из зоны комфорта освободит от страхов и ограничений, мешающих раскрыть твой потенциал. В этом пути тебя поддержат единомышленники, а честность с собой позволит увидеть свою истинную картину мира и начать действовать.
-        </p>
-        <div className='mt-11 info-text font-bold'>
-          Готов к трансформации? Присоединяйся!
+    <section className="w-full flex flex-col xl:ml-[360px] px-4 max-w-[80%] relative">
+      {/* Заголовок */}
+      <h1 className="text-4xl font-normal uppercase mt-24">
+        что такое<br />
+        <span className="text-[#0F6351] underline">Kemenger?</span>
+      </h1>
+
+      <img
+        src={tree}
+        alt="Tree"
+        className="w-[450px] object-cover absolute top-16 right-4 sm:right-10 md:right-20 lg:right-32 xl:right-16"
+      />
+
+
+
+      {/* Основная часть — 2 ряда с изображениями */}
+      <div className="flex flex-col gap-6 mt-24">
+
+        {/* Первый ряд */}
+        <div className="flex flex-wrap gap-4">
+          {/* Левая большая картинка */}
+          <img
+            src={about}
+            alt="About Kemenger"
+            className="w-[550px] h-[416px] rounded object-cover"
+          />
+
+          {/* Правая колонка с tree и двумя картинками */}
+          <div className="flex flex-col gap-4">
+            {/* Tree — сверху */}
+
+            {/* Две картинки */}
+            <img
+              src={master3}
+              alt="Master 3"
+              className="w-[350px] h-[150px] rounded object-cover"
+            />
+            <img
+              src={master1}
+              alt="Master 1"
+              className="w-[350px] h-[250px] rounded object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Второй ряд */}
+        <div className="flex flex-wrap gap-4">
+          <img
+            src={master3}
+            alt="Master 3 Again"
+            className="w-[550px] h-[250px] rounded object-cover"
+          />
+          <img
+            src={master2}
+            alt="Master 2"
+            className="w-[350px] h-[250px] rounded object-cover"
+          />
         </div>
       </div>
 
-      <div className='flex justify-center items-center'>
-        <img
-          src={about}
-          alt='product detail'
-          width={570}
-          height={522}
-          className='object-contain rounded-xl'
-        />
-      </div>
 
     </section>
   );

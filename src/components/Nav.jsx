@@ -16,7 +16,7 @@ const Nav = () => {
   };
 
   return (
-    <header className="padding-x py-8 absolute z-10 w-full mt-12">
+    <header className="padding-x py-12 absolute -z-10 w-full bg-white ">
       <nav className="flex max-lg:justify-between items-center max-container">
         <div
           className="flex items-center justify-between w-[129px] lg:hidden"
@@ -36,7 +36,7 @@ const Nav = () => {
               <a
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="font-inter leading-normal text-lg text-slate-gray"
+                className="pointer font-inter leading-normal text-lg text-slate-gray"
               >
                 {item.label}
               </a>

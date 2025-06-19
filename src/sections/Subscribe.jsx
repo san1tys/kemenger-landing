@@ -55,7 +55,7 @@ const Subscribe = () => {
   return (
     <section
       id="signup"
-      className="max-container flex justify-between items-center max-lg:flex-col gap-10"
+      className="max-container flex justify-between items-center max-lg:flex-col gap-10 max-w-[80%] xl:ml-[230px]"
     >
       <div className="lg:max-w-[35%] ml-20 max-xl:ml-0">
         <h3 className="text-[42px] leading-[68px] lg:max-w-md font-worksans font-bold">

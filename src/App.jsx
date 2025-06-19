@@ -1,4 +1,7 @@
-import { Nav } from "./components";
+import { Nav, ServiceCard, Button } from "./components";
+import { services } from "./constants";
+import { arrowRight } from "./assets/icons";
+import { petal, mountains } from "./assets/images";
 import {
   CustomerReviews,
   Footer,
@@ -10,41 +13,82 @@ import {
   Masters,
 } from "./sections";
 
+import LeftSidebarImage from "./components/LeftSidebarImage";
+
 const App = () => {
   return (
-    <main className='relative'>
+    <main className="relative">
+      {/* Intro Section with its own background */}
       <section className="relative w-full h-screen">
-        <div className="absolute inset-0 bg-[url(./assets/images/bgg.jpg)] bg-cover bg-no-repeat opacity-80 -z-10"></div>
+        <div className="absolute inset-0 bg-[url(./assets/images/intro2.jpg)] bg-cover bg-no-repeat -z-10 right"></div>
         <Nav />
         <Hero />
       </section>
-      {/* <section className='padding'>
-        <PopularProducts />
-      </section> */}
 
-      <section className="relative pt-28">
+      {/* Main Sections with repeating sidebar */}
+      <section className="relative">
+        {/* Background pattern */}
         <div className="absolute inset-0 bg-[url(./assets/images/pattern-2.png)] bg-[size:600px] bg-repeat opacity-[0.15] -z-10"></div>
-        <section className="padding-special">
+
+        {/* Section 1 */}
+        <section className="relative">
+          <LeftSidebarImage />
           <SuperQuality />
         </section>
-        <div className="relative z-10">
-          <section className="padding-x py-10">
-            <Services />
+
+        {/* Section 2 */}
+        <section className="relative padding-x py-10">
+          <LeftSidebarImage />
+          <Services />
+        </section>
+
+
+        <section className="relative padding-x py-10">
+          <LeftSidebarImage />
+          <section id="advantages" className="w-full flex flex-col xl:ml-[300px] px-4 max-w-[80%] relative">
+            <h1 className="font-worksans mt-24 text-[36px] font-semibold">Почему именно <span className="text-coral-red underline">KEMENGER?</span></h1>
+            <img src={mountains} alt="mountains" className="absolute -z-10 w-[400px] object-cover right-44 top-20" />
+            <img src={petal} alt="mountains" className="absolute z-10 w-[300px] object-cover right-0 top-0" />
+            <div className='flex justify-center flex-wrap gap-9 mt-24'>
+              {services.map((service) => (
+                <ServiceCard key={service.label} {...service} />
+              ))}
+            </div>
+
+            <div className="mt-12">
+              <Button label='Записаться' iconURL={arrowRight} scrollToId="signup" />
+            </div>
+
           </section>
-          <section className="padding">
-            <SpecialOffer />
-          </section>
-          <section className="padding-x py-10 pb-28">
-            <Masters />
-          </section>
-        </div>
+        </section>
+
+
+        {/* Section 3 */}
+        <section className="relative padding">
+          <LeftSidebarImage />
+          <SpecialOffer />
+        </section>
+
+        {/* Section 4 */}
+        <section className="relative padding-x py-10 pb-28">
+          <LeftSidebarImage />
+          <Masters />
+        </section>
+
+        {/* Reviews — без сайдбара */}
+        <section className="relative">
+          <LeftSidebarImage />
+          <CustomerReviews />
+        </section>
+
+        {/* Subscribe — без сайдбара */}
+        <section className="padding-x sm:py-32 py-16 w-full relative overflow-hidden">
+          <LeftSidebarImage />
+          <Subscribe />
+        </section>
       </section>
-      <section className="bg-pale-blue padding">
-        <CustomerReviews />
-      </section>
-      <section className="padding-x sm:py-32 py-16 w-full">
-        <Subscribe />
-      </section>
+
+      {/* Footer — без сайдбара */}
       <section className="bg-black padding-x padding-t pb-8">
         <Footer />
       </section>

@@ -73,6 +73,26 @@ export const services = [
     },
 ];
 
+
+export const advantages = [
+    {
+        imgURL: method,
+        label: "Раскрыть сильные стороны",
+        subtext: "Практика, а не теория."
+    },
+    {
+        imgURL: method,
+        label: "Осознать ограничивающие установки",
+        subtext: "Глубокая работа с собой."
+    },
+    {
+        imgURL: method,
+        label: "Получить проверенные на практике инструменты",
+        subtext: "Методы, которые реально работают."
+    },
+];
+
+
 export const masters = [
     {
         imgURL: mas1,
@@ -143,14 +163,14 @@ export const footerLinks = [
     {
         title: "Свяжитесь с нами",
         links: [
-            { src: phone, name: "+9 255 4862354", link: "" },
-            { src: envelope, name: "support@company.com", link: "" },
+            { src: phone, name: "+7 747 567 0387", link: "#" },
+            { src: envelope, name: "info@kemenger.kz", link: "#" },
         ],
     },
 ];
 
 export const socialMedia = [
-    { src: facebook, alt: "facebook logo", link: "" },
-    { src: whatsapp, alt: "whatsapp logo", link: "" },
-    { src: instagram, alt: "instagram logo", link: "https://www.instagram.com/" },
+    { src: facebook, alt: "facebook logo", link: "#" },
+    { src: whatsapp, alt: "whatsapp logo", link: "#" },
+    { src: instagram, alt: "instagram logo", link: "https://www.instagram.com/kemenger_kazakhstan/" },
 ];

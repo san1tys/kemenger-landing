@@ -3,7 +3,7 @@ import "./MasterCard.css";
 
 const MasterCard = ({ imgURL, label, subtext, backContent, experience }) => {
   return (
-    <div className="container sm:w-[312px] sm:min-w-[312px] h-[414px] w-full">
+    <div className="container w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 min-w-[200px] max-w-[300px] h-[484px]">
       <div className="card">
         <div className="front bg-white">
           <img

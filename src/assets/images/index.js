@@ -1,9 +1,10 @@
 import intro from './intro.png'
+import intro2 from './intro2.jpg'
 import about from './aboutus.jpg'
 
 import footerLogo from './footer-logo.svg'
 import headerLogo from './header-logo.svg'
-import tree from './tree.svg'
+import tree from './tree.png'
 
 import master1 from './master1.jpg'
 import master2 from './master2.jpg'
@@ -20,9 +21,18 @@ import mas2 from './mas2.jpg'
 import mas3 from './mas3.jpg'
 import mas4 from './mas4.jpg'
 
+import leftSidebar from './left-sidebar.png'
+
+import mountains from './mount.png'
+import petal from './petal.png'
+
+import adam from './adam.png'
+import petal2 from './petal2.png'
+
 export {
 
     intro,
+    intro2,
     about,
     footerLogo,
     headerLogo,
@@ -42,6 +52,14 @@ export {
     mas1,
     mas2,
     mas3,
-    mas4
+    mas4,
+
+    leftSidebar,
+
+    mountains,
+    petal,
+    petal2,
+
+    adam
 
 }
