@@ -16,11 +16,10 @@ const Nav = () => {
   };
 
   return (
-    <header className="padding-x py-12 absolute -z-10 w-full bg-white ">
+    <header className="padding-x py-12 absolute -z-10 w-full bg-white">
       <nav className="flex max-lg:justify-between items-center max-container">
-        <div
-          className="flex items-center justify-between w-[129px] lg:hidden"
-        >
+        {/* Логотип слева (для мобилки) */}
+        <div className="flex items-center justify-between w-[129px] lg:hidden">
           <img
             src={headerLogo}
             alt="logo"
@@ -28,15 +27,19 @@ const Nav = () => {
             height={29}
             className="m-0 w-auto h-[50px]"
           />
-          <h2 className="font-worksans ml-4 text-[#106351] font-bold">KEMENGER</h2>
+          <h2 className="font-worksans ml-4 text-[#106351] font-bold">
+            KEMENGER
+          </h2>
         </div>
+
+        {/* Навигация */}
         <ul className="flex justify-center items-center gap-16 max-lg:hidden ml-[500px]">
           {navLinks.map((item) => (
             <li key={item.label}>
               <a
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="pointer font-inter leading-normal text-lg text-slate-gray"
+                className="cursor-pointer font-inter leading-normal text-lg text-slate-gray"
               >
                 {item.label}
               </a>
@@ -44,6 +47,7 @@ const Nav = () => {
           ))}
         </ul>
 
+        {/* Иконка бургер-меню (для мобилки) */}
         <div className="hidden max-lg:block">
           <img src={hamburger} alt="hamburger icon" width={25} height={25} />
         </div>

@@ -53,7 +53,7 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="">
+        <div className="max-sm:hidden">
           <img src={footerLogo} alt="footerLogo" className="w-48 h-48" />
         </div>
       </div>

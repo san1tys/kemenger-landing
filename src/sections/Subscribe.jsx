@@ -64,7 +64,7 @@ const Subscribe = () => {
       className="max-container flex justify-between items-center max-lg:flex-col gap-10 max-w-[80%] xl:ml-[230px]"
     >
       <div className="lg:max-w-[35%] ml-20 max-xl:ml-0">
-        <h3 className="text-[42px] leading-[68px] lg:max-w-md font-worksans font-bold">
+        <h3 className="text-[42px] leading-[48px] max-sm:text-[36px]  max-sm:leading-[40px] lg:max-w-md font-worksans font-bold">
           Не упусти свой <span className="text-coral-red underline">шанс</span> изменить жизнь!
         </h3>
         <p className="mt-4 info-text">

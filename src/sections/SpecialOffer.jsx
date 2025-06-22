@@ -10,7 +10,7 @@ const SpecialOffer = () => {
       <img
         src={headerLogo}
         alt="logo"
-        className="w-24 h-24 absolute top-[-30px] right-[-30px] rotate-[12deg] z-10"
+        className="w-24 h-24 absolute top-[-30px] right-[-30px] rotate-[12deg] z-10 max-sm:top-[-50px]"
       />
 
       <div className='flex items-center justify-center flex-col'>

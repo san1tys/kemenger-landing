@@ -45,11 +45,11 @@ const App = () => {
 
         <section className="relative padding-x py-10">
           <LeftSidebarImage />
-          <section id="advantages" className="w-full flex flex-col xl:ml-[300px] px-4 max-w-[80%] relative">
+          <section id="advantages" className="w-full flex flex-col xl:ml-[300px] max-w-[80%] max-md:mx-auto relative">
             <h1 className="font-worksans mt-24 text-[36px] font-semibold">Почему именно <span className="text-coral-red underline">KEMENGER?</span></h1>
-            <img src={mountains} alt="mountains" className="absolute -z-10 w-[400px] object-cover right-44 top-20" />
-            <img src={petal} alt="mountains" className="absolute z-10 w-[300px] object-cover right-0 top-0" />
-            <div className='flex justify-center flex-wrap gap-9 mt-24'>
+            <img src={mountains} alt="mountains" className="absolute -z-10 w-[400px] object-cover right-44 top-20 max-sm:hidden" />
+            <img src={petal} alt="mountains" className="absolute z-10 w-[300px] object-cover right-0 top-0 max-sm:hidden" />
+            <div className='flex justify-center flex-wrap gap-9 mt-24 max-sm:mt-12'>
               {services.map((service) => (
                 <ServiceCard key={service.label} {...service} />
               ))}

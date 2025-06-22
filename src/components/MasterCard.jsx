@@ -1,4 +1,3 @@
-import React from "react";
 import "./MasterCard.css";
 
 const MasterCard = ({ imgURL, label, subtext, backContent, experience }) => {

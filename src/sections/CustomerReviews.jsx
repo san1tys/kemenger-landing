@@ -37,9 +37,9 @@ const CustomerReviews = () => {
   };
 
   return (
-    <section id="reviews" className="max-w-[80%] mt-40 w-full py-10 xl:ml-[300px]">
-      <div className="ml-12">
-        <h3 className="font-worksans text-4xl font-bold">
+    <section id="reviews" className="max-w-[80%] mt-40 max-sm:mt-0 w-full py-10 max-sm:mx-auto xl:ml-[300px]">
+      <div className="ml-12 max-sm:ml-0">
+        <h3 className="font-worksans text-4xl font-bold max-sm:text-[36px] max-sm:leading-[40px]">
           Что говорят наши
           <span className="text-coral-red underline underline-offset-[0.75rem]"> участники?</span>
         </h3>
