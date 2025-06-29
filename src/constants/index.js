@@ -163,14 +163,13 @@ export const footerLinks = [
     {
         title: "Свяжитесь с нами",
         links: [
-            { src: phone, name: "+7 747 567 0387", link: "#" },
-            { src: envelope, name: "info@kemenger.kz", link: "#" },
+            { src: phone, name: "+7 747 567 0387", link: "tel:77475670387" },
+            { src: envelope, name: "tekesbayd@gmail.com", link: "mailto:tekesbayd@gmail.com" },
         ],
     },
 ];
 
 export const socialMedia = [
-    { src: facebook, alt: "facebook logo", link: "#" },
-    { src: whatsapp, alt: "whatsapp logo", link: "#" },
+    { src: whatsapp, alt: "whatsapp logo", link: "https://wa.me/77751556669?text=Здравствуйте,%20я%20пишу%20по%20вопросу..." },
     { src: instagram, alt: "instagram logo", link: "https://www.instagram.com/kemenger_kazakhstan/" },
 ];

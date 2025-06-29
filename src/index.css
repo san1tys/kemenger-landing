@@ -12,10 +12,9 @@
   scroll-behavior: smooth;
 }
 
-/* body {
+body {
   overflow-x: hidden;
 }
- */
 
 @layer components {
   .max-container {

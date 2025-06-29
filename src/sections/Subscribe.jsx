@@ -3,7 +3,10 @@ import { useState } from "react";
 const Subscribe = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [town, setTown] = useState("");
+
 
   function handleInput(e) {
     let value = e.target.value.replace(/\D/g, "");
@@ -31,11 +34,14 @@ const Subscribe = () => {
   function Submit(e) {
     e.preventDefault();
     setIsSubmitting(true);
-    const formElem = document.querySelector("form");
-    const formData = new FormData(formElem);
+
+    const formData = new FormData();
+    formData.append("Name", name);
+    formData.append("Phone", phone);
+    formData.append("Town", town);
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbwxiZ_W_Wc7qgFuFoJgMsPk9vgyaZ1CghIA5X6ldbNjvBTVc8Fjf8Q77ilIRgL7tsfQHQ/exec",
+      "https://script.google.com/macros/s/AKfycbxswdkCufR1B-kazTUr1TNjAMmvQISBAOU9Vc0b0o8awbNuVnz4B47YsxgUC-CkYhJ9/exec",
       {
         method: "POST",
         body: formData,
@@ -51,6 +57,9 @@ const Subscribe = () => {
       .then(() => {
         setIsSubmitting(false);
         setIsModalOpen(true);
+        setName("");
+        setPhone("");
+        setTown("");
       })
       .catch(() => {
         alert("Произошла ошибка. Пожалуйста, попробуйте позже.");
@@ -77,35 +86,37 @@ const Subscribe = () => {
           <div className="mb-5">
             <input
               type="text"
-              id="name"
               name="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               placeholder="Введите ваше имя"
-              className="bg-transparent border border-gray-300 text-gray-600 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-gray-600 caret-gray-600"
               required
+              className="bg-transparent border border-gray-300 text-gray-600 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-gray-600 caret-gray-600"
             />
+
           </div>
           <div className="mb-5">
             <input
               type="tel"
-              id="phone"
               name="Phone"
               maxLength="16"
               placeholder="Ваш номер телефона"
-              className="bg-transparent border border-gray-300 text-gray-600 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-gray-600 caret-gray-600"
-              required
               value={phone}
               onInput={handleInput}
               onFocus={handleFocus}
+              required
+              className="bg-transparent border border-gray-300 text-gray-600 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-gray-600 caret-gray-600"
             />
+
 
           </div>
           <div className="mb-5 relative">
             <select
-              id="towns"
               name="Town"
-              className="bg-transparent border border-gray-300 text-gray-600 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-gray-600 caret-gray-600 pr-10"
+              value={town}
+              onChange={(e) => setTown(e.target.value)}
               required
-              defaultValue=""
+              className="bg-transparent border border-gray-300 text-gray-600 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-gray-600 caret-gray-600 pr-10"
             >
               <option value="" disabled>
                 Выберите город
